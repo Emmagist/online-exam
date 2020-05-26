@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body{
+  font-family: verdana;
+}
+.phpcoding{
+  width: 900px;
+  margin: 0 auto;
+  background: #ddd;
+}
+/* header start */
+.headeroption{
+  background: #444 url("../img/exam6.jpg") no-repeat 0 0;
+  background-size: cover;
+  border-bottom: 2px solid #444;
+  height: 75px;
+  /* padding: 5px; */
+  margin-top: 2px;
+}
+.maincontent{
+  font-size: 18px;
+  min-height: 430px;
+  padding: 20px;
+}
+#maincontent-ul{
+  position: relative;
+}
+#maincontent-ul li{
+  display: inline-block;
+  /* font-size: 24px; */
+  border: 1px solid #444;
+  margin: 0px 0px 12px 5px;
+  padding: 5px;
+}
+#maincontent-ul li:hover{
+  border: none;
+}
+#maincontent-ul li a{
+  text-decoration: none;
+  color: gray;
+}
+#maincontent-ul li a:hover{
+  color: #fff;
+}
+/* header end */
+
+/* main index start */
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid  #888;
+  /* width:; */
+  min-height: 62vh;
+}
+.main h1{
+  text-align: center;
+  position: absolute;
+  background: #ddd;
+  color: #888;
+  height: 18px;
+  padding: 3px 15px 17px 20px;
+  width: 31rem;
+  margin-left: 10rem;
+  box-shadow: 2px 5px #888;
+  margin-top: 15px;
+}
+.main .main-h1{
+  text-align: center;
+  position: absolute;
+  background: #ddd;
+  color: #888;
+  height: 18px;
+  padding: 3px 15px 17px 20px;
+  width: 45rem;
+  margin-left: 3rem;
+  box-shadow: 2px 5px #888;
+  margin-top: 15px;
+}
+#segment{
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 50px 50px 46px;
+  float: left;
+  margin: 80px 0 15px 15px;
+}
+.segment{
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 45px 45px 43px;
+  margin-top: 83px;
+  margin-left: 25rem;
+   /* margin-right: 15px;  */
+  min-height: 199.5px;
+}
+.seg{
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 30px 45px 32px;
+  margin-top: 83px;
+  margin-left: 25rem;
+   /* margin-right: 15px;  */
+  min-height: 199.5px;
+}
+/* .form{
+  margin: 0;
+} */
+p{
+  margin: 0;
+}
+p a{
+  text-decoration: none;
+  color: lightskyblue;
+}
+p a:hover{
+  text-decoration: underline;
+  color: cornflowerblue;
+}
+input[type="text"],input[type="password"]{
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 238px;
+}
+button{
+  /* position: absolute; */
+  cursor: pointer;
+  font-size: 18px;
+  padding: 7px;
+  margin: 0 0 10px 98px;
+  border: none;
+  border-radius: 2px;
+  width: 72%;
+  /* color: #fff; */
+}
+button:hover{
+  background: #888;
+  color: #fff;
+}
+.tblone{
+  width: 100%;
+  border: 1px solid#fff;
+  margin: 20px 0;
+}
+.tblone td{
+  padding: 5px 10px;
+  text-align: center;
+}
+table.tblone tr:nth-child(2n+1){
+  background: #fff;
+  height: 30px;
+}
+table.tblone tr:nth-child(2n){
+  background: #f1f1f1;
+  height: 30px;
+}
+/* main index start end */
+
+/* exam segment start */
+.exam-segment{
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 50px 70px 46px 50px;
+  float: left;
+  margin: 80px 0 15px 22px;
+}
+#exam-segment{
+  position: absolute;
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 45px 130px 43px 45px;
+  margin-top: 83px;
+  margin-left: 27rem;
+  min-height: 199.5px;
+}
+.h3-exam{
+  text-align: center;
+  margin: 10px 0 10px 60px;
+  padding: 0 0 10px 10px;
+  border-bottom: 1px solid #888;
+}
+.h5-exam{
+  text-align: center;
+  color: lightskyblue;
+  border: 1px solid lightskyblue;
+  padding: 10px;
+  margin: 20px 0 0 60px;
+}
+/* exam segment end */
+
+/* start profile */
+.profile{
+  width: 500px;
+  margin: 15% 20%;
+  border: 1px solid #ddd;
+  padding: 30px 50px 50px;
+}
+.profile-button{
+  font-size: 16px;
+  padding: 8px;
+  background: #888;
+  margin-left: 95px;
+  color: #f1f1f1;
+  border: none;
+}
+.profile-button:hover{
+  background: green;
+  color: #fff;
+  padding: 10px;
+}
+/* end profile */
+
+/* success msg/error msg */
+.success{
+  /* padding: 10px; */
+  color: lightgreen;
+  /* background: green; */
+}
+/* success msg/error msg end*/
+
+.error, .disable, .empty{ 
+  color: lightcoral;
+}
+
+/* footer start */
+.footeroption{
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.headeroption h2, .footeroption h2{
+  margin: 0;
+  font-size: 24px;
+}
+/* footer end */
