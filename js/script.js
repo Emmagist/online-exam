@@ -17,7 +17,9 @@ $(function(){
       //Success Callback that get invoked upon success completion of an Ajax request
       success:function(data){
         $("#state").html(data);
+        window.location = "index.php";
       }
+      
     });
     return false;
   });
@@ -36,31 +38,29 @@ $(function(){
       type:'POST',
       url:'getlogin.php',
       data:dataString,
-      success:function(data){
+      success: function(data){
         if ($.trim(data) == "empty") {
-          $(".empty").show();
-          $(".disable").hide();
-          $(".error").hide();
+          $("#empty").show();
+          // $("#disable").hide();
+          // $("#error").hide();
           setTimeout(function(){
-            $(".empty").fadeOut();
+            $("#empty").fadeOut();
           }, 4000);
         }else if ($.trim(data) == "disable") {
-          $(".disable").show();
-          $(".empty").hide();
-          $(".error").hide();
+          $("#disable").show();
+          // $("#empty").hide();
+          // $("#error").hide();
           setTimeout(function(){
-            $(".disable").fadeOut();
+            $("#disable").fadeOut();
           }, 4000);
-        }
-        else if ($.trim(data) == "error") {
-          $(".error").show();
-          $(".empty").hide();
-          $(".disable").hide();
+        }else if ($.trim(data) == "error") {
+          $("#error").show();
+          // $("#empty").hide();
+          // $("#disable").hide();
           setTimeout(function(){
-            $(".error").fadeOut();
+            $("#error").fadeOut();
           }, 4000);
-        }
-        else{
+        }else{
           window.location = "exam.php";
         }
       }

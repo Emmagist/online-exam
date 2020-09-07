@@ -45,19 +45,17 @@
     //User Login
     public function userLogin($email, $password){
       global $fm, $db;
-      echo $email    = $fm->validation($email);exit;
+      $email    = $fm->validation($email);
       $password = $fm->validation($password);
 
       $stringEmail      = mysqli_real_escape_string($db->link, $email);
-      $stringPassword   = mysqli_real_escape_string($db->link, md5($password));
+      $stringPassword   = mysqli_real_escape_string($db->link, ($password));
       if ($stringEmail == "" || $stringPassword == "") {
         echo "empty";
         exit();
-      }else {
-        $query = "SELECT * FROM tbl_user WHERE email = '$stringEmail'";
+      }else{
+        $query = "SELECT * FROM tbl_user WHERE email = '$stringEmail' AND password = '$stringPassword'";
         $result = $db->select($query);
-        $r = mysqli_num_rows($result);
-        echo $r;exit;
         if ($result != false) {
           // fetch associative array to check if use is disabled or nor
           $value = $result->fetch_assoc();
@@ -96,6 +94,7 @@
     }
     //update users data
     public function updateUserData($userid, $data){
+      //the parameter $data represent $_POST
       global $fm, $db;
       $name     = $fm->validation($data['name']);
       $username = $fm->validation($data['username']);
@@ -108,20 +107,10 @@
       $query = "UPDATE tbl_user SET name = '$stringName', username = '$stringUsername', email = '$stringEmail' WHERE id = '$userid'";
       $update_row = $db->update($query);
       if ($update_row) {
-        $msg = "<script>
-        var msg = <span class='success'>Profile Updated Successfully!</span>
-        setTimeout(function(){
-          $(msg).fadeout();
-        },4000);
-        </script>";
+        $msg = " <span class='success'>Profile Updated Successfully!</span>";
         return $msg;
       }else{
-        $msg = "<script>
-        var msg = <span class='error'>User Not Updated! Error 402...</span>;
-        setTimeout(function(){
-          $(msg).fadeout();
-        },4000);
-        </script>";
+        $msg = "<span class='error'>User Not Updated! Error 402...</span>";
         return $msg;
       }
     }

@@ -4,7 +4,7 @@
 ?>
 
 <div class="main">
-  <h1>Online Exam System - User Reg</h1>
+  <h1>Online Exam System - <span class="span-h1-main">User Reg</span></h1>
   <div id="segment">
     <img src="img/exam.jpg" alt="">
   </div>

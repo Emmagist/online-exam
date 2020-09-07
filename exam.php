@@ -14,7 +14,7 @@
   </div>
   <div class="" id="exam-segment">
    <h3 class="h3-exam">Start Testing</h3>
-   <h5 class="h5-exam">Start Now...</h5>
+   <h5 class="h5-exam"><a href="start_test.php">Start Now...</a></h5>
   </div>
 </div>
 <?php include 'inc/footer.php'; ?>

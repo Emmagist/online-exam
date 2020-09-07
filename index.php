@@ -2,25 +2,22 @@
   include ("inc/header.php"); 
   include ("getregister.php");
 
-  Session::checkLogin();
+  //Session::checkLogin();
 
 ?>
 
 <div class="main">
-  <h1>Online Exam System -User Login</h1>
+  <h1>Online Exam System <span>-User Login</span></h1>
   <div id="segment">
     <img src="img/exam.jpg" alt="">
   </div>
-  <div class="segment">
+  <div class="segment" id="index-segment">
     <!-- <span id="state"></span> -->
-    <span class="empty" style="
-  display: none;">Field can not be empty! Error 401</span>
-    <span class="error" style="
-  display: none;">Sorry! User Not Found <br> Please Register. Error 409</span>
-    <span class="disable" style="
-  display: none;">User Disabled ! Error 406</span>
-    <form action="" method="POST">
-      <table class="tbl">
+    <span class="error" id="empty">Field can not be empty! Error 401</span><br>
+    <span class="error" id="error">Sorry! User Not Found <br> Please Register. Error 409</span><br>
+    <span class="error" id="disable">User Disabled ! Error 406</span>
+    <form action="" method="POST" id="form-one">
+      <table class="tbl" id="table-index">
         <tr>
           <td>Email</td>
           <td><input type="text" name="email" required id="email"></td>

@@ -8,7 +8,7 @@
   global $usr;
 
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $update = $usr->updateUserData($userid, 'POST');
+    $update = $usr->updateUserData($userid, $_POST);
   }
   
 

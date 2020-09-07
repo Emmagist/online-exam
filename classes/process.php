@@ -5,7 +5,7 @@
   include_once ($filepath.'/../helpers/format.php');
   
   class Process{
-    
+    public function processData($data){}
 
   }
   $pro = new Process();

@@ -38,6 +38,7 @@
         return $msg;
       }
     }
+    
     // to get the questions from database by order
     public function getQuestByOrder(){
       global $db;
@@ -45,6 +46,7 @@
       $result = $db->select($query);
       return $result;
     }
+
     //how to delete two tables from database once
     public function delQuestion($questNo){
       $tables = array("tbl_quest", "tbl_ans");
@@ -61,6 +63,7 @@
         return $msg;
       }
     }
+
     //get total rows in database 
     public function getTotalRow(){
       global $db;
@@ -68,6 +71,33 @@
       $getResult = $db->select($query);
       $total     =  $getResult->num_rows;
       return $total;
+    }
+
+    // get question
+    public function getQuestion(){
+      global $db;
+      $query   = "SELECT * FROM tbl_quest";
+      $getData = $db->select($query);
+      $result  = $getData->fetch_assoc();
+      return $result;
+    }
+
+    //question number
+    public function getQuestionByNumber($number){
+      global $db;
+      $query   = "SELECT * FROM tbl_quest WHERE questNo = '$number'";
+      $getData = $db->select($query);
+      $result  = $getData->fetch_assoc();
+      return $result;
+    }
+
+    //get answer
+    public function getAnswer($number){
+      global $db;
+      $query   = "SELECT * FROM tbl_ans WHERE questNo = '$number'";
+      $getData = $db->select($query);
+      //$result  = $getData->fetch_assoc();
+      return $getData;
     }
   }
   $exm = new Exams();

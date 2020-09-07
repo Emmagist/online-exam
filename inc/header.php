@@ -52,15 +52,16 @@
           $login = Session::get("login");
           if ($login == true) :
         ?>
-        <span style="float:right; color:#888"><i class="fa fa-user"></i> Welcome <strong style="color: green;"><?php echo Session::get("username"); ?></strong></span>
+        <span style="" class="display-username">Welcome <strong style="color: green;"><i class="fa fa-user"></i> <?php echo Session::get("username"); ?></strong></span>
         <?php endif?>
         <ul id="maincontent-ul">
           <?php
             $login = Session::get("login");
             if ($login == true) :
           ?>
-          <li><a href="profile.php">Profile</a></li>
+          
           <li><a href="exam.php">Exam</a></li>
+          <li><a href="profile.php">Profile</a></li>
           <li><a href="?action=logout">Logout</a></li>
           <?php  else : ?>
           <li><a href="index.php">Login</a></li>
