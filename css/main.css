@@ -227,6 +227,31 @@ table.tblone tr:nth-child(2n){
 }
 /* end profile */
 
+/* test started */
+  #test h3{
+    margin-bottom: 20px;
+  }
+
+  #test input[type="checkbox"]{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .test-button{
+    margin-top: 5px;
+    padding: 3px;
+    font-size: 16px;
+  }
+
+  .test-button:hover{
+    background: green;
+    padding: 7px;
+    color: #fff;
+    border-radius: 5px;
+  }
+/* test end */
+
 /* start-test start */
   #test-segment{
     border: 1px solid #f4f4f4;
@@ -254,7 +279,7 @@ table.tblone tr:nth-child(2n){
     margin-top: 5px;
   }
 
-  #test-segment a{
+  #test-segment a, .view-a{
     background: #f4f4f4 none repeat scroll 0 0;
     border: 1px solid #ddd;
     color: #444;
@@ -264,11 +289,32 @@ table.tblone tr:nth-child(2n){
     text-align: center;
     text-decoration: none;
   }
-  #test-segment a:hover{
+  #test-segment a:hover, .view-a:hover{
     background: blue;
     color: #fff;
   }
 /* start-test end */
+
+/* view ans started */
+  .viewans{
+    border: 1px solid #f3f3f3;
+    margin: 100px 0 20px 200px;
+    /* max-width: 1000px; */
+    width: 100%;
+    padding: 20px;
+  }
+  .viewans input[type="checkbox"]{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .viewans h3{
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+/* view ans end */
 
 /* success msg/error msg */
 .success{

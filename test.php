@@ -2,6 +2,7 @@
   include ("inc/header.php"); 
   // include ("getregister.php");
   include_once ($filepath.'/../classes/exam.php');
+  include_once ($filepath.'/../classes/process.php');
 
   Session::checkSession();
   if (isset($_GET['q'])) {
@@ -23,8 +24,8 @@
 ?>
 
 <div class="main">
-  <h1>Question <?php echo $question['questNo'] . ' of ' . $total; ?></php></h1>
-  <div class="profile">
+  <h1 id="test-h1">Question <?php echo $question['questNo'] . ' of ' . $total; ?></php></h1>
+  <div class="profile" id="test">
     <form action="" method="POST">
       <table class="tbl">
         <tr>
@@ -36,7 +37,7 @@
             foreach ($answer as $ans) {
         ?>
         <tr>
-          <td><input type="checkbox" name="ans1" value="<?php echo $ans['id'];?>"> <?php echo $ans['ans']; ?></td>
+          <td><input type="checkbox" name="ans" value="<?php echo $ans['id'];?>"> <?php echo $ans['ans']; ?></td>
         </tr>
         <?php }}; ?>
       </table>
