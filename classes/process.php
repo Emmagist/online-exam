@@ -13,7 +13,7 @@
       $number         = $fm->validation($data['number']);
       $ans            = mysqli_real_escape_string($db->link, $selectedAns);
       $selectedNumber = mysqli_real_escape_string($db->link, $number);
-      $next           = $number +1;
+      $next           = $number + 1;
 
       if (!isset($_SESSION['score'])) {
         $_SESSION['score'] = '0';

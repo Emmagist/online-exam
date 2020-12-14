@@ -13,6 +13,15 @@
     <form action="" method="POST" class="form">
       <table class="tbl">
         <tr>
+          <td>Select Area</td>
+          <td>
+            <select name="" id="">
+              <option value="">Select Option</option>
+              <option value="Select Option">kkgkk</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
           <td>Full Name</td>
           <td><input type="text" id="name" name="name"></td>
         </tr>
