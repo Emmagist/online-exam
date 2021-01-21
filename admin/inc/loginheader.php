@@ -26,17 +26,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 </head>
 <body>
   <div class="phpcoding">
-    <section class="headeroption">
-      <div class="menucontent">
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="profile.php">Profile</a></li>
-          <li><a href="exam.php">Exam</a></li>
-          <li><a href="register.php">Register</a></li>
-          <li><a href="logout.php">Logout</a></li>
-        </ul>
-      </div>
-    </section>
+    
   </div>
 </body>
 </html>

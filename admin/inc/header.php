@@ -41,6 +41,7 @@
         <ul id="maincontent-ul">
           <li><a href="index.php">Home</a></li>
           <li><a href="users.php">Manage User</a></li>
+          <li><a href="adminSet.php">Set Exam Options</a></li>
           <li><a href="questadd.php">Add Question</a></li>
           <li><a href="queslist.php">Question List</a></li>
           <li><a href="?action=logout">Logout</a></li>

@@ -5,26 +5,32 @@
   include_once ($filepath.'/../helpers/format.php');
   
   class Exams{
+    public function setExamType($data){
+      global $db;
+
+      $exam_type  = mysqli_real_escape_string($db->link, $data['exam_type']);
+      $query      = "INSERT INTO tbl_set(exam_type) VALUE ('$exam_type)";
+    }
     public function addQuestion($data){
       global $db;
       
-      $questNo = mysqli_real_escape_string($db->link, $data['questNo']);
-      $quest = mysqli_real_escape_string($db->link, $data['quest']);
-      $ans = array();
-      $ans[1] = $data['ans1'];
-      $ans[2] = $data['ans2'];
-      $ans[3] = $data['ans3'];
-      $ans[4] = $data['ans4'];
+      $questNo  = mysqli_real_escape_string($db->link, $data['questNo']);
+      $quest    = mysqli_real_escape_string($db->link, $data['quest']);
+      $ans      = array();
+      $ans[1]   = $data['ans1'];
+      $ans[2]   = $data['ans2'];
+      $ans[3]   = $data['ans3'];
+      $ans[4]   = $data['ans4'];
       $rightAns = $data['rightAns'];
-      $query = "INSERT INTO tbl_quest(questNo, quest) VALUE ('$questNo', '$quest')";
-      $inserts = $db->insert($query);
+      $query    = "INSERT INTO tbl_quest(questNo, quest) VALUE ('$questNo', '$quest')";
+      $inserts  = $db->insert($query);
       if ($inserts) {
         foreach ($ans as $an =>$ansName) {
           if ($ansName != '') {
             if ($rightAns == $an) {
-              $query = "INSERT INTO tbl_ans(questNo, rightAns, ans) VALUE ('$questNo', '1', '$ansName')";
+              $query = "INSERT INTO tbl_ans(questNo, ans, rightAns) VALUE ('$questNo', '$ansName', '1')";
             } else {
-              $query = "INSERT INTO tbl_ans(questNo, rightAns, ans) VALUE ('$questNo', '0', '$ansName')";
+              $query = "INSERT INTO tbl_ans(questNo, ans, rightAns) VALUE ('$questNo', '$ansName', '0')";
             }
             $insertDb = $db->insert($query);
             if ($insertDb) {
@@ -97,6 +103,13 @@
       $query   = "SELECT * FROM tbl_ans WHERE questNo = '$number'";
       $getData = $db->select($query);
       //$result  = $getData->fetch_assoc();
+      return $getData;
+    }
+
+    public function getExamSet(){
+      global $db;
+      $query   = "SELECT * FROM tbl_set";
+      $getData = $db->select($query);
       return $getData;
     }
   }
